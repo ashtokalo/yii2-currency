@@ -1,6 +1,6 @@
 <?php
 
-namespace ashtokalo\currency;
+namespace ashtokalo\yii2\currency;
 
 use ashtokalo\yii2\currency\models\CurrencyPair;
 
