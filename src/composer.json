@@ -1,0 +1,26 @@
+{
+    "name": "ashtokalo/yii2-adminlte",
+    "description": " Yii2 module to operate with currencies.",
+    "type": "library",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "ashtokalo\\yii2\\currency\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Shtokalo",
+            "email": "alexey@shtokalo.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
