@@ -1,6 +1,6 @@
 <?php
 
-namespace ashtokalo\currency\behaviors;
+namespace ashtokalo\yii2\currency\behaviors;
 
 use yii\db\Expression;
 

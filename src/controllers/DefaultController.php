@@ -1,11 +1,11 @@
 <?php
 
-namespace ashtokalo\currency\controllers;
+namespace ashtokalo\yii2\currency\controllers;
 
-use ashtokalo\currency\models\CurrencyPair;
+use ashtokalo\yii2\currency\models\CurrencyPair;
 use Yii;
-use ashtokalo\currency\forms\ExchangeSearch;
-use ashtokalo\currency\forms\Exchange;
+use ashtokalo\yii2\currency\forms\ExchangeSearch;
+use ashtokalo\yii2\currency\forms\Exchange;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -2,7 +2,7 @@
 
 namespace ashtokalo\currency;
 
-use ashtokalo\currency\models\CurrencyPair;
+use ashtokalo\yii2\currency\models\CurrencyPair;
 
 class Module extends \yii\base\Module
 {

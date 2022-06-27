@@ -1,9 +1,9 @@
 <?php
 
-namespace ashtokalo\currency\models;
+namespace ashtokalo\yii2\currency\models;
 
-use ashtokalo\currency\behaviors\EditorBehavior;
-use ashtokalo\currency\behaviors\TimestampBehavior;
+use ashtokalo\yii2\currency\behaviors\EditorBehavior;
+use ashtokalo\yii2\currency\behaviors\TimestampBehavior;
 use Yii;
 use yii\db\Expression;
 

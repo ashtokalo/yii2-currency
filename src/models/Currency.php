@@ -1,6 +1,6 @@
 <?php
 
-namespace ashtokalo\currency\models;
+namespace ashtokalo\yii2\currency\models;
 
 use Yii;
 use yii\base\InvalidValueException;

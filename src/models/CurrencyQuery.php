@@ -1,6 +1,6 @@
 <?php
 
-namespace ashtokalo\currency\models;
+namespace ashtokalo\yii2\currency\models;
 
 /**
  * This is the ActiveQuery class for [[Currency]].

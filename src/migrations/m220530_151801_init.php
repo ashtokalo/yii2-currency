@@ -1,6 +1,6 @@
 <?php
 
-//namespace ashtokalo\currency\migrations;
+//namespace ashtokalo\yii2\currency\migrations;
 use yii\db\Migration;
 
 class m220530_151801_init extends Migration

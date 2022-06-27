@@ -1,6 +1,6 @@
 <?php
 
-namespace ashtokalo\currency\behaviors;
+namespace ashtokalo\yii2\currency\behaviors;
 
 use Yii;
 use yii\base\InvalidCallException;
@@ -13,7 +13,7 @@ use yii\db\BaseActiveRecord;
  * To use EditorBehavior, insert the following code to your ActiveRecord class:
  *
  * ```php
- * use ashtokalo\currency\models\TimestampBehavior;
+ * use ashtokalo\yii2\currency\models\TimestampBehavior;
  *
  * public function behaviors()
  * {

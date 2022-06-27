@@ -1,13 +1,13 @@
 <?php
 
-namespace ashtokalo\currency\forms;
+namespace ashtokalo\yii2\currency\forms;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * ExchangeSearch represents the model behind the search form of `ashtokalo\currency\web\forms\Exchange`.
+ * ExchangeSearch represents the model behind the search form of `ashtokalo\yii2\currency\web\forms\Exchange`.
  */
 class ExchangeSearch extends Exchange
 {

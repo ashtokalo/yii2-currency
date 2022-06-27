@@ -5,16 +5,16 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
-/* @var $searchModel ashtokalo\currency\forms\ExchangeSearch */
+/* @var $searchModel ashtokalo\yii2\currency\forms\ExchangeSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $model ashtokalo\currency\models\CurrencyPair */
+/* @var $model ashtokalo\yii2\currency\models\CurrencyPair */
 
 $this->title = sprintf('Курс валют для пары %s-%s',
     $model->baseCurrency->alpha_code, $model->quotedCurrency->alpha_code);
 $this->params['breadcrumbs'][] = ['label' => 'Курсы валют', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
-/** @var \ashtokalo\currency\Module $module */
+/** @var \ashtokalo\yii2\currency\Module $module */
 $module = \Yii::$app->controller->module;
 
 ?>

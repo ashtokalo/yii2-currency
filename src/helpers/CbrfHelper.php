@@ -1,9 +1,9 @@
 <?php
 
-namespace ashtokalo\currency\helpers;
+namespace ashtokalo\yii2\currency\helpers;
 
-use ashtokalo\currency\models\Currency;
-use ashtokalo\currency\models\CurrencyPair;
+use ashtokalo\yii2\currency\models\Currency;
+use ashtokalo\yii2\currency\models\CurrencyPair;
 use yii\caching\Cache;
 
 class CbrfHelper

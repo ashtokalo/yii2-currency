@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model ashtokalo\currency\models\CurrencyPair */
+/* @var $model ashtokalo\yii2\currency\models\CurrencyPair */
 
 $this->title = 'Новый курс валют';
 $this->params['breadcrumbs'][] = ['label' => 'Курсы валют', 'url' => ['index']];

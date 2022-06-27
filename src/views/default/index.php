@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 /* @var $this yii\web\View */
-/* @var $searchModel ashtokalo\currency\web\forms\ExchangeSearch */
+/* @var $searchModel ashtokalo\yii2\currency\web\forms\ExchangeSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Курсы валют';

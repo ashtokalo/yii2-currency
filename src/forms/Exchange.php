@@ -1,10 +1,10 @@
 <?php
 
-namespace ashtokalo\currency\forms;
+namespace ashtokalo\yii2\currency\forms;
 
-use ashtokalo\currency\models\Currency;
+use ashtokalo\yii2\currency\models\Currency;
 use Yii;
-use ashtokalo\currency\models\CurrencyPair;
+use ashtokalo\yii2\currency\models\CurrencyPair;
 use yii\debug\models\search\User;
 use yii\helpers\Url;
 

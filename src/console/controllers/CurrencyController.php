@@ -1,10 +1,10 @@
 <?php
 
-namespace ashtokalo\currency\console\controllers;
+namespace ashtokalo\yii2\currency\console\controllers;
 
-use ashtokalo\currency\helpers\CbrfHelper;
-use ashtokalo\currency\models\Currency;
-use ashtokalo\currency\models\CurrencyPair;
+use ashtokalo\yii2\currency\helpers\CbrfHelper;
+use ashtokalo\yii2\currency\models\Currency;
+use ashtokalo\yii2\currency\models\CurrencyPair;
 use yii\base\InvalidValueException;
 use yii\console\Controller;
 
