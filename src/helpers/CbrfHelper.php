@@ -55,6 +55,7 @@ class CbrfHelper
                         'base_currency_id' => $baseCurrency->id,
                         'quoted_currency_id' => $quotedCurrency->id,
                         'rate' => $newRate,
+                        'origin' => 'Банк России',
                     ]);
                     if ($pair->locked_at) {
                         $newPair->addError('locked_at', 'Валютная пара заблокирована от автоматических изменений.');

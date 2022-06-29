@@ -15,6 +15,7 @@ use yii\db\Expression;
  * @property int $base_currency_id идентификатор базовой валюты
  * @property int $quoted_currency_id идентификатор котируемой валюты
  * @property double $rate отношение цен двух валют
+ * @property string $origin источник данных
  * @property string $created_at
  * @property int $created_by
  * @property string $locked_at дата блокировки, если для валютной пары заблокированы автоматические обновления
@@ -61,6 +62,7 @@ class CurrencyPair extends \yii\db\ActiveRecord
             'base_currency_id' => 'Базовая валюта',
             'quoted_currency_id' => 'Котируемая валюта',
             'rate' => 'Курс',
+            'origin' => 'Источник',
             'created_at' => 'Время создания',
             'created_by' => 'Создал',
             'locked_at' => 'Дата заморозки',
@@ -148,6 +150,7 @@ class CurrencyPair extends \yii\db\ActiveRecord
             'base_currency_id'   => $this->base_currency_id,
             'quoted_currency_id' => $this->quoted_currency_id,
             'rate'               => $this->rate,
+            'origin'             => $this->origin,
             'locked'             => true,
         ]);
 
@@ -169,6 +172,7 @@ class CurrencyPair extends \yii\db\ActiveRecord
             'base_currency_id'   => $this->base_currency_id,
             'quoted_currency_id' => $this->quoted_currency_id,
             'rate'               => $this->rate,
+            'origin'             => $this->origin,
         ]);
 
         if ($pair->save())
