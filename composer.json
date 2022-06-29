@@ -3,6 +3,10 @@
     "description": " Yii2 module to operate with currencies.",
     "type": "library",
     "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "yiisoft/yii2": "2.0.45"
     },
     "autoload": {
         "psr-4": {
