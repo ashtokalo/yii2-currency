@@ -8,7 +8,7 @@ use yii\caching\Cache;
 
 class CbrfHelper
 {
-    const CBR_DAILY_REATE_URL = 'http://www.cbr.ru/scripts/XML_daily.asp?date_req=';
+    const CBR_DAILY_REATE_URL = 'https://www.cbr.ru/scripts/XML_daily.asp?date_req=';
 
     /**
      * Возвращает курсы валют по данным ЦБ РФ http://cbr.ru на заданную дату.
@@ -21,9 +21,13 @@ class CbrfHelper
         $dayUrl = static::CBR_DAILY_REATE_URL . date('d/m/Y', $time ?: time());
         /** @var Cache $cache */
         $cache = \Yii::$app->get('cache');
+        $cache = false;
         if (!$cache || empty($rates = $cache->get(__METHOD__ . $dayUrl))) {
             $xmlString = @file_get_contents($dayUrl);
             $xml = @json_decode(@json_encode(@simplexml_load_string($xmlString)), true);
+            if (empty($xmlString) || empty($xml) || !is_array($xml['Valute'])) {
+                throw new \Exception(sprintf('Can not retrieve currency data from %s', $dayUrl));
+            }
             $rates = @array_column($xml['Valute'], null, 'CharCode') ?: false;
             if ($cache) $cache->set(__METHOD__ . $dayUrl, $rates, 3600 * 12);
         }
