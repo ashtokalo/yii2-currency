@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="alert alert-info alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
     <h5><i class="icon fas fa-info"></i> Внимание!</h5>
-    Курс валют обновляется автоматически несколько раз в день по данным с сайта Центрального Банка России.
+    Курс валют обновляется автоматически согласно настроенным источникам.
     Нажмите на кнопку <b>Подробности...</b> чтобы увидеть старые значения, установить курс вручную или
     включить/выключить автоматическое обновление.
 </div>

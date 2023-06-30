@@ -3,6 +3,8 @@
 namespace ashtokalo\yii2\currency;
 
 use ashtokalo\yii2\currency\models\CurrencyPair;
+use ashtokalo\yii2\currency\origins\CbrfOrigin;
+use ashtokalo\yii2\currency\origins\RateOrigin;
 
 class Module extends \yii\base\Module
 {
@@ -13,6 +15,14 @@ class Module extends \yii\base\Module
     public $defaultRoute = 'default';
 
     public $permissions = [];
+
+    /**
+     * @var array источники котировок, название классов или массивы для инициализации классов,
+     *      наследников RateOrigin.
+     */
+    public $rateOrigins = [
+        CbrfOrigin::class,
+    ];
 
     public function can(string $permission, array $params = [], bool $allowCaching = true)
     {
@@ -39,5 +49,22 @@ class Module extends \yii\base\Module
     public function canUnlock(CurrencyPair $model, $allowCaching = true)
     {
         return $this->can(static::ACCESS_UNLOCK, ['model' => $model], $allowCaching);
+    }
+
+    /**
+     * @return RateOrigin[]
+     */
+    function getRateOrigins(): array
+    {
+        static $cleared = false;
+        if (!$cleared) {
+            foreach ($this->rateOrigins as &$rateOrigin) {
+                if (is_string($rateOrigin) || is_array($rateOrigin)) {
+                    $rateOrigin = \Yii::createObject($rateOrigin);
+                }
+            }
+            $cleared = true;
+        }
+        return $this->rateOrigins;
     }
 }

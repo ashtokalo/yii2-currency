@@ -134,7 +134,7 @@ class CurrencyPair extends \yii\db\ActiveRecord
                 'next_currency_pair_id' => null,
             ])->one();
 
-            if ($prevCurrencyPair)
+            if ($prevCurrencyPair && $prevCurrencyPair->id != $this->id)
             {
                 $prevCurrencyPair->next_currency_pair_id = $this->id;
                 $prevCurrencyPair->save();
